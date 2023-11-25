@@ -20,7 +20,7 @@ static void	ft_putchar(char c, int *len)
 
 void	ft_putunsigned(unsigned int n, int *len)
 {
-	if (n > 10)
+	if (n >= 10)
 	{
 		ft_putunsigned(n / 10, len);
 		ft_putunsigned(n % 10, len);
