@@ -28,7 +28,7 @@ void	ft_putnbrft(int n, int *len)
 		ft_putchar('-', len);
 		ln = (-ln);
 	}
-	if (ln > 10)
+	if (ln >= 10)
 	{
 		ft_putnbrft(ln / 10, len);
 		ft_putnbrft(ln % 10, len);
