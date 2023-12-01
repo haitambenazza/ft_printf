@@ -14,7 +14,7 @@
 
 static void	ft_putchar(int c, int *len)
 {
-	write(1, "%", 1);
+	write(1, c, 1);
 	*len += 1;
 }
 static int	ft_forma(const char **format, int *len, va_list args)
