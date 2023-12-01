@@ -12,6 +12,11 @@
 
 #include "libftprintf.h"
 
+static void	ft_putchar(int c, int *len)
+{
+	write(1, "%", 1);
+	*len += 1;
+}
 static int	ft_forma(const char **format, int *len, va_list args)
 {
 	if (**format == 'c')
@@ -37,6 +42,11 @@ static int	ft_forma(const char **format, int *len, va_list args)
 		return (-1);
 	else if (**format == '%')
 		ft_putcharft('%', len, format);
+	else
+	{
+		ft_putchar('%', len);
+		ft_putchar(c, len);
+	}
 	return (0);
 }
 
