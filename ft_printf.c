@@ -46,7 +46,7 @@ static int	ft_forma(const char **format, int *len, va_list args)
 	{
 		ft_putchar('%', len);
 		ft_putchar(**format, len);
-		*formt += 1;
+		*format += 1;
 	}
 	return (0);
 }
